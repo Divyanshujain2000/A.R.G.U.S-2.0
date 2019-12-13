@@ -6,20 +6,20 @@
 //#define RH_ENCODER_B 5
 //#define LH_ENCODER_A 2
 //#define LH_ENCODER_B 4
-#define Pwm1a 6
-#define Pwm2a 7
-#define Dir1a 44
-#define Dir2a 49
+#define Pwm1a 12
+#define Pwm2a 10
+#define Dir1a 11
+#define Dir2a 9
 
 #define Pwm1b 8
-#define Pwm2b 9
-#define Dir1b 46
-#define Dir2b 51
+#define Pwm2b 6
+#define Dir1b 7
+#define Dir2b 5
 
-#define Pwm1c 10
-#define Pwm2c 11
-#define Dir1c 48
-#define Dir2c 47
+#define Pwm1c 4
+#define Pwm2c 2
+#define Dir1c 30
+#define Dir2c 22
 
 
 #if (ARDUINO >= 100)
@@ -36,8 +36,8 @@ ros::NodeHandle  nh;
 //ros::Publisher chatter("rpm_drive", &rpm_msg);
 geometry_msgs::Point feedback;
 ros::Publisher chatter("feedback_motor", &feedback);
-int encoder0PinA = 2;   //left orange ->3
-int encoder0PinB = 3;   //left red    ->2
+int encoder0PinA = 20;   //left orange ->3
+int encoder0PinB = 21;   //left red    ->2
 int encoder1PinA = 18; //right orange ->19
 int encoder1PinB = 19;  //right red   ->18
 
