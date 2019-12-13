@@ -191,8 +191,8 @@ void setup() {
           pinMode(Pwm2c,OUTPUT);
           pinMode(Dir1c,OUTPUT);
           pinMode(Dir2c,OUTPUT);
-          attachInterrupt(1, CountA, CHANGE);
-          attachInterrupt(0, StateB, FALLING);
+          attachInterrupt(2, CountA, CHANGE);
+          attachInterrupt(3, StateB, FALLING);
           attachInterrupt(4, Count1A, CHANGE);
           attachInterrupt(5, State1B, FALLING);
           nh.initNode();
@@ -305,8 +305,8 @@ void loop() {
         //w = 60*dist/interval;
         //rial.print(",");
         //Serial.println(dist1);
-       feedback.x=dist;
-       feedback.y=dist1;       
+       feedback.x=dist*100;
+       feedback.y=dist1*(-100);       
    
     }
     //Serial.println(currentMillis);
